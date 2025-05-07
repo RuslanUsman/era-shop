@@ -1,124 +1,47 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #222;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-  }
-  
-  .menu-button, .cart-button {
-    background-color: #f4a444;
-    color: #000;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-
-
-
-
-
-  .footer {
-    background-color: #222; /* Фон подвала */
-    color: #f4a444; /* Цвет текста */
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень сверху */
-    font-size: 14px;
-    width: 100%;
-}
-
-
-
-
-/* Основная структура страницы */
-body {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1e1e1e;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Гарантирует, что тело страницы занимает всю высоту окна */
-  margin: 0; /* Убираем лишние отступы */
-}
-
-.main-content {
-  flex: 1; /* Расширяет основной контент, чтобы занять всё доступное пространство */
-  padding-bottom: 10px; /* Добавляем отступ, чтобы оставить место под подвал */
-}
-/* Основное содержимое страницы */
-.main-content {
-  padding-bottom: 60px; /* Добавляем отступ снизу, равный высоте подвала */
-}
-
-/* Подвал */
-.footer {
-  position: fixed; /* Закрепляем подвал */
-  bottom: 0; /* Располагаем подвал внизу */
-  width: 100%; /* Растягиваем подвал по всей ширине */
-  background-color: #222; /* Цвет фона */
-  color: #f4a444; /* Цвет текста */
-  text-align: center;
-  padding: 10px 0; /* Внутренний отступ */
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень сверху */
-  font-size: 14px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  border-top: 2px solid #f4a261;
   z-index: 100;
 }
 
+.menu-button, .cart-button {
+  background: #f4a261;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  flex: 1; /* Автоматическое масштабирование */
+  max-width: 150px;
+}
 
+.menu-button:hover, .cart-button:hover {
+  background: #e76f51;
+  transform: scale(1.05);
+}
 
-
-
-
-@media (min-width: 1200px) {
+/* Адаптация для мобильных устройств */
+@media screen and (max-width: 600px) {
   .footer {
-    font-size: 16px; /* Увеличиваем шрифт для больших экранов */
-    padding: 15px 0; /* Увеличиваем отступы */
+    flex-direction: column; /* ✅ Кнопки в одну колонку на узких экранах */
+    gap: 5px;
+    padding: 8px;
   }
 
   .menu-button, .cart-button {
-    padding: 12px 15px; /* Увеличиваем размер кнопок */
-    font-size: 16px;
+    width: 80%; /* ✅ Кнопки растягиваются на 80% ширины экрана */
+    max-width: none;
+    padding: 10px;
   }
 }
-
-@media (max-width: 992px) {
-  .footer {
-    font-size: 14px; /* Стандартный размер текста */
-    padding: 10px 0;
-  }
-
-  .menu-button, .cart-button {
-    padding: 10px 12px; /* Уменьшаем кнопки для средних экранов */
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    font-size: 12px; /* Уменьшаем шрифт для узких экранов */
-    padding: 8px 0;
-    flex-direction: column; /* Меняем расположение элементов на вертикальное */
-  }
-
-  .menu-button, .cart-button {
-    padding: 8px 10px;
-    font-size: 12px; /* Компактные кнопки */
-    margin-bottom: 5px; /* Отступы между кнопками */
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    font-size: 10px; /* Самый компактный текст */
-    padding: 5px 0;
-    text-align: center; /* Центрируем текст */
-  }
-
-  .menu-button, .cart-button {
-    padding: 6px 8px; /* Минимальные отступы для кнопок */
-    font-size: 10px;
-  }
-}
-

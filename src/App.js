@@ -6,11 +6,11 @@ import CartPage from './CartPage';
 import Footer from './Footer';
 import { CartProvider } from './CartContext';
 
-
 function App() {
     return (
         <CartProvider>
-            <Router>
+            {/* Добавляем basename для GitHub Pages */}
+            <Router basename="/era-survival">
                 <div className="main-content">
                     <Routes>
                         <Route path="/" element={<MainMenu />} />

@@ -13,8 +13,9 @@ function Footer() {
                 Главное меню 🏠
             </button>
             <button onClick={() => navigate('/cart')} className="cart-button">
-                Корзина 🛒 ({totalItems})
-            </button>
+    Корзина 🛒 ({totalItems > 0 ? totalItems : 'Пусто'})
+</button>
+
         </div>
     );
 }
