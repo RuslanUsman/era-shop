@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/era-shop/static/css/main.48c7c227.css",
-    "main.js": "/era-shop/static/js/main.fed28cb2.js",
+    "main.js": "/era-shop/static/js/main.c1f73849.js",
     "index.html": "/era-shop/index.html",
     "main.48c7c227.css.map": "/era-shop/static/css/main.48c7c227.css.map",
-    "main.fed28cb2.js.map": "/era-shop/static/js/main.fed28cb2.js.map"
+    "main.c1f73849.js.map": "/era-shop/static/js/main.c1f73849.js.map"
   },
   "entrypoints": [
     "static/css/main.48c7c227.css",
-    "static/js/main.fed28cb2.js"
+    "static/js/main.c1f73849.js"
   ]
 }
